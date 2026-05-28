@@ -6,9 +6,9 @@
   },
 
   "server": {
-    "ip": "SURVIVALsghsc.aternos.me", 
-    "port": 48213,   
-    "version": "1.12.1"   
+    "ip": "EqualMC.aternos.me", 
+    "port": 33921,   
+    "version": "1.26.2"   
   },
   
   "position": {
@@ -35,18 +35,18 @@
       "repeat-delay": 60,
 
       "messages": [
-        "Sabit is the best fr",
+        "BEST SERVER EQUALMC",
         "Hacking = Ban",
-        "Please don't hack and play fair",
-        "I love you all for playing fair",
-        "hehehehehehe",
-        "I can see ur monitor btw"
+        "SMOOTHEST SERVER",
+        "SUBSCRIBE TO HARDIK GAMER 281",
+        "YOOOO",
+        "LETS MAKE SMP BEAUTIFUL"
       ]
     },
 
     "chat-log": true,
     "auto-respawn": true,
-    "auto-reconnect": true,
-    "auto-recconect-delay": 10
+    "auto-reconnect": false,
+    "auto-recconect-delay": 5
   }
 }
