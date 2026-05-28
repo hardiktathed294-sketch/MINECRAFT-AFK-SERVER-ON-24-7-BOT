@@ -1,0 +1,50 @@
+const mineflayer = require('mineflayer')
+
+function createBot() {
+
+  const bot = mineflayer.createBot({
+    host: 'EqualMC.aternos.me',
+    port: 33921,
+    username: 'AFK_Bot',
+    version: '1.20.6',
+    auth: 'offline'
+  })
+
+  bot.on('spawn', () => {
+    console.log('Bot joined the server!')
+
+    setInterval(() => {
+
+      const actions = ['forward', 'back', 'left', 'right']
+      const action = actions[Math.floor(Math.random() * actions.length)]
+
+      bot.setControlState(action, true)
+      bot.setControlState('jump', true)
+
+      setTimeout(() => {
+        bot.clearControlStates()
+      }, 3000)
+
+    }, 5000)
+
+    setInterval(() => {
+      bot.chat('AFK Bot Online')
+    }, 30000)
+
+  })
+
+  bot.on('end', () => {
+    console.log('Disconnected. Reconnecting in 5 seconds...')
+    setTimeout(createBot, 5000)
+  })
+
+  bot.on('kicked', reason => {
+    console.log('Kicked:', reason)
+  })
+
+  bot.on('error', err => {
+    console.log('Error:', err)
+  })
+}
+
+createBot()
